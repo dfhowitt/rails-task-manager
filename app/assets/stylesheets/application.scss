@@ -1,0 +1,14 @@
+@import "bootstrap/scss/bootstrap";
+.container {
+  text-align: left;
+}
+
+ul {
+  list-style: none;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration:none;
+  color: red
+}

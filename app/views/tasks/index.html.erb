@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Tasks</h1>
+  <ul>
+    <% @tasks.each do |task| %>
+    <li id="owner-icons"> <input type="checkbox" <%= task.completed == true ? 'checked' : 'unchecked' %>>
+      <%= link_to task.title, task_path(task) %>
+      <div class="glyphicon glyphicon-trash">
+      <%= link_to 'Remove', task_path(task), method: :delete, data:
+        { confirm: 'Are you certain you want to delete this?' }%>
+      </div>
+    </li>
+    <% end %>
+  </ul>
+  <div class="add">
+    <%= link_to 'Add a new task', 'tasks/new' %>
+  </div>
+</div>
